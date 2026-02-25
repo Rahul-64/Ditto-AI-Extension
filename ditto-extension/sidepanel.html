@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ditto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+  <link href="sidepanel.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="ditto-header">
+    <div class="ditto-brand">
+      <div class="status-dot">
+        <span class="ping"></span>
+        <span></span>
+      </div>
+      <span class="brand-name">Ditto</span>
+    </div>
+    <span class="status-text" id="statusText">Online</span>
+  </header>
+
+  <!-- Context Display (pinned below header, shows when text is captured) -->
+  <div class="context-card" id="contextCard" style="display: none;">
+    <div class="context-label">
+      <span class="material-icons-round context-icon">format_quote</span>
+      <span>Captured Context</span>
+    </div>
+    <p class="context-text" id="contextText"></p>
+    <span class="context-source" id="contextSource"></span>
+  </div>
+
+  <!-- Chat Area (scrollable) -->
+  <main class="chat-area" id="chatHistory">
+    <!-- Welcome message -->
+    <div class="welcome-card" id="welcomeCard">
+      <div class="awake-icon-wrap">
+        <div class="awake-glow"></div>
+        <span class="material-icons-round awake-icon">auto_awesome</span>
+      </div>
+      <h1 class="awake-title">Ditto is awake</h1>
+      <p class="awake-subtitle">Highlight text on any page, right-click, and select<br>
+        <strong>"Talk with Ditto"</strong> to start chatting.
+      </p>
+    </div>
+    <!-- Chat messages will be appended here -->
+  </main>
+
+  <!-- Input Dock (fixed bottom) -->
+  <div class="input-dock">
+    <div class="input-wrapper">
+      <textarea id="userInput" placeholder="Ask Ditto something..." rows="1"></textarea>
+      <button class="mic-btn" id="micBtn" title="Hold to talk">
+        <span class="material-icons-round" id="micIcon">mic</span>
+      </button>
+      <button class="send-btn" id="sendBtn" title="Send message">
+        <span class="material-icons-round">send</span>
+      </button>
+    </div>
+    <div class="voice-status" id="voiceStatus"></div>
+  </div>
+
+  <!-- Hidden audio player for TTS playback -->
+  <audio id="audioPlayer" style="display:none;"></audio>
+
+  <script src="sidepanel.js"></script>
+</body>
+
+</html>

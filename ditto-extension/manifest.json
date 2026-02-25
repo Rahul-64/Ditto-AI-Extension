@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Ditto",
+    "version": "1.0.0",
+    "description": "Your AI context companion — highlight text, right-click, and chat instantly.",
+    "permissions": [
+        "sidePanel",
+        "contextMenus",
+        "storage",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "action": {
+        "default_title": "Ditto — AI Context Companion"
+    }
+}
