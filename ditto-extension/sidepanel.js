@@ -7,7 +7,7 @@
  */
 
 // ── Configuration ──
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://ditto-ai.onrender.com";
 const SILENCE_THRESHOLD = 15;   // RMS level below which = silence
 const SILENCE_DURATION = 3000;  // 5s of silence before auto-stop (gives time to think)
 const MIN_RECORDING_TIME = 3000; // 3s minimum before silence detection kicks in
